@@ -1,0 +1,6 @@
+An (exceedingly insecure!) implementation of the Lehmer PRNG. Optimized for
+ease of mental computation.
+
+For the provided values of P and M the operation is equivalent to
+multiplying the ones digit of the input by six and adding the tens digit.
+This is useful primarily as a particularly obscure sort of party trick.
