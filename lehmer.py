@@ -1,5 +1,6 @@
 #!/usr/bin/python -tt
 
+import signal as sig
 import sys
 
 P = 59 # prime
@@ -18,6 +19,7 @@ def extract_digit(x, n):
     return x // pow(10, n) % 10 # zero-indexed
 
 def main():
+    sig.signal(sig.SIGINT, sig.SIG_DFL)
     try:
         x = int(sys.argv[1])
     except (IndexError, ValueError):
